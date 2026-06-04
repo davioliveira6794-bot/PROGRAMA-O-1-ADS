@@ -1,0 +1,51 @@
+html, body{  
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+}
+
+main{
+    display: grid;
+    grid: gap 2%;
+    background-color: rgb(1, 98, 223);
+    padding: 1em;
+    box-sizing: border-box;
+    width: 80%;
+   
+}
+
+article{grid-area: texto;}
+nav{grid-area: menu;}
+aside{grid-area:texto;}
+
+article,nav,aside,footer,header{
+    background-color:rgb(10, 180, 250);}
+
+
+header,footer{
+    width: 80%;
+    height: 10vh;
+    margin: 0 auto;
+    text-align: center;
+    margin-inline-end: auto;
+}
+
+
+header{
+    background-color: rgb(10, 184, 243);
+    width: 80px;
+    height: 60px;
+    margin: 0 auto;
+}
+main{
+    grid-template-areas: "menu menu menu menu menu menu"
+                         "texto texto texto texto links links"
+                         "texto texto texto texto links links"
+                         "texto texto texto texto links links"
+                         "texto texto texto texto links links";
+    
+
+        
+    }
+                
