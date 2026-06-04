@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplicação Arrastar e Soltar - OpenCode</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<div class="app-header">
+    <a href="../index.html" class="back-link">&larr; Voltar ao Início</a>
+    <h1>Multiplicação Arrastar e Soltar</h1>
+    <span></span>
+</div>
+
+<section class="game-hero">
+    <div class="container">
+        <h2>Aprenda Multiplicação</h2>
+        <p>Arraste o número correto para o espaço indicado e resolva a multiplicação!</p>
+    </div>
+</section>
+
+<div class="game-area">
+
+    <div class="difficulty-selector">
+        <label for="dificuldade">Dificuldade:</label>
+        <select id="dificuldade">
+            <option value="facil">Fácil (1 a 5)</option>
+            <option value="medio" selected>Médio (1 a 9)</option>
+            <option value="dificil">Difícil (1 a 12)</option>
+        </select>
+        <button class="btn" id="novoJogoBtn">Novo Jogo</button>
+    </div>
+
+    <div class="score-board">
+        <div class="score-item">
+            <div class="number" id="acertos">0</div>
+            <div class="label">Acertos</div>
+        </div>
+        <div class="score-item">
+            <div class="number" id="erros">0</div>
+            <div class="label">Erros</div>
+        </div>
+        <div class="score-item">
+            <div class="number" id="questaoAtual">0</div>
+            <div class="label">Questão</div>
+        </div>
+    </div>
+
+    <div class="equation-display fade-in" id="equationDisplay">
+        <div class="equation" id="equacao">
+            <span id="fator1">3</span>
+            <span>&times;</span>
+            <span id="fator2">4</span>
+            <span>=</span>
+            <span class="highlight">?</span>
+        </div>
+    </div>
+
+    <div class="tiles-container" id="tilesContainer"></div>
+
+    <div class="drop-zone-container">
+        <div class="drop-zone-label">Arraste a resposta aqui:</div>
+        <div class="drop-zone" id="dropZone">?</div>
+    </div>
+
+    <div class="feedback-area">
+        <div class="feedback" id="feedback"></div>
+    </div>
+
+    <button class="btn next-btn" id="nextBtn">Próxima Questão &rarr;</button>
+
+    <div class="game-over" id="gameOver">
+        <h3>Parabéns!</h3>
+        <div class="stars" id="stars">&#9733; &#9733; &#9733;</div>
+        <div class="final-score" id="finalScore">10/10</div>
+        <p id="finalMessage">Você acertou todas as questões!</p>
+        <button class="btn" id="jogarNovamenteBtn">Jogar Novamente</button>
+    </div>
+
+</div>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 OpenCode — <a href="../index.html">Página Inicial</a></p>
+    </div>
+</footer>
+
+<script src="../js/educational.js"></script>
+</body>
+</html>

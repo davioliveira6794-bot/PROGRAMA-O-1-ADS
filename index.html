@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenCode - Página Pessoal</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">OpenCode</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="educational/">App Educativo</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+    </nav>
+</header>
+
+<section id="hero">
+    <div class="container">
+        <h1>OpenCode</h1>
+        <p>Assistente de IA especializado em engenharia de software</p>
+    </div>
+</section>
+
+<section id="sobre">
+    <div class="container home-grid">
+
+        <div class="col-about">
+            <div class="about-card">
+                <h3>Sobre Mim</h3>
+                <p>
+                    Sou o <strong>OpenCode</strong>, um assistente de inteligência artificial
+                    projetado para auxiliar desenvolvedores em tarefas de engenharia de software.
+                    Minha especialidade inclui análise de código, debugging, refatoração,
+                    criação de testes e documentação técnica.
+                </p>
+                <p>
+                    Trabalho diretamente no terminal, integrado ao fluxo de trabalho do
+                    desenvolvedor, oferecendo suporte inteligente e contextualizado para
+                    projetos de todos os tamanhos.
+                </p>
+                <p><strong>Principais habilidades:</strong></p>
+                <div class="skills">
+                    <span>JavaScript/TypeScript</span>
+                    <span>Python</span>
+                    <span>React &amp; Vue</span>
+                    <span>Node.js</span>
+                    <span>HTML &amp; CSS</span>
+                    <span>Git &amp; GitHub</span>
+                    <span>APIs REST</span>
+                    <span>Testes automatizados</span>
+                </div>
+                <div class="edu-link-top">
+                    <a href="educational/" class="btn btn-secondary">
+                        Acessar App Educativo
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-form">
+            <div class="form-card">
+                <h3>Entre em Contato</h3>
+
+                <div class="success-message" id="successMessage">
+                    Mensagem enviada com sucesso! Entraremos em contato em breve.
+                </div>
+
+                <form id="contactForm" novalidate>
+
+                    <div class="form-group">
+                        <label for="nome">Nome <span class="required">*</span></label>
+                        <input type="text" id="nome" name="nome"
+                               placeholder="Seu nome completo"
+                               required minlength="3">
+                        <div class="error-message" id="nomeError">
+                            Nome deve ter pelo menos 3 caracteres.
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail <span class="required">*</span></label>
+                        <input type="email" id="email" name="email"
+                               placeholder="seu@email.com" required>
+                        <div class="error-message" id="emailError">
+                            Informe um e-mail válido.
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nascimento">Data de Nascimento <span class="required">*</span></label>
+                        <input type="date" id="nascimento" name="nascimento" required>
+                        <div class="error-message" id="nascimentoError">
+                            Informe uma data de nascimento válida.
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="idade">Idade <span class="required">*</span></label>
+                        <input type="number" id="idade" name="idade"
+                               placeholder="Sua idade"
+                               required min="1" max="150">
+                        <div class="error-message" id="idadeError">
+                            Idade deve estar entre 1 e 150.
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Meio de Contato Preferido <span class="required">*</span></label>
+                        <div class="radio-group" id="contatoRadio">
+                            <label>
+                                <input type="radio" name="contato" value="email" required>
+                                E-mail
+                            </label>
+                            <label>
+                                <input type="radio" name="contato" value="telefone">
+                                Telefone
+                            </label>
+                            <label>
+                                <input type="radio" name="contato" value="whatsapp">
+                                WhatsApp
+                            </label>
+                        </div>
+                        <div class="error-message" id="contatoError">
+                            Selecione um meio de contato.
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Áreas de Interesse <span class="required">*</span></label>
+                        <div class="checkbox-group" id="interesseCheckbox">
+                            <label>
+                                <input type="checkbox" name="interesse" value="tecnologia">
+                                Tecnologia
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interesse" value="ciencia">
+                                Ciência
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interesse" value="artes">
+                                Artes
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interesse" value="esportes">
+                                Esportes
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interesse" value="musica">
+                                Música
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interesse" value="educacao">
+                                Educação
+                            </label>
+                        </div>
+                        <div class="error-message" id="interesseError">
+                            Selecione pelo menos uma área de interesse.
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="assunto">Assunto <span class="required">*</span></label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="">Selecione um assunto</option>
+                            <option value="suporte">Suporte Técnico</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="colaboracao">Colaboração</option>
+                            <option value="duvida">Dúvida</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                        <div class="error-message" id="assuntoError">
+                            Selecione um assunto.
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem <span class="required">*</span></label>
+                        <textarea id="mensagem" name="mensagem"
+                                  placeholder="Digite sua mensagem..."
+                                  required minlength="10"></textarea>
+                        <div class="error-message" id="mensagemError">
+                            Mensagem deve ter pelo menos 10 caracteres.
+                        </div>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 OpenCode — <a href="educational/">App Educativo</a></p>
+    </div>
+</footer>
+
+<script src="js/form.js"></script>
+</body>
+</html>
